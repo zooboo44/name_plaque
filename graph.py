@@ -15,7 +15,7 @@ class Graph:
 
         self.auth_record_file = Path(".auth_record")
 
-        cache_options = TokenCachePersistenceOptions(name="myapp")
+        cache_options = TokenCachePersistenceOptions(name="myapp", allow_unencrypted_storage=True)
 
         authentication_record = None
 
