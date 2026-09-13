@@ -42,8 +42,6 @@ class Graph:
         with open(self.auth_record_file, "wb") as f:
             f.write(record.serialize().encode("utf-8"))
 
-    async def print_presence(self):
+    async def get_presence(self):
         presence = await self.user_client.me.presence.get()
-
-        print(presence.availability)
-        print(presence.activity)
+        return presence.availability
