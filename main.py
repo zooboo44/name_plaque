@@ -18,7 +18,7 @@ async def main():
     while True:
         user_status = await graph.get_presence()
         led_control.set_color(user_status)
-        time.sleep(10)
+        time.sleep(2)
 
 if __name__ == '__main__':
     asyncio.run(main())
